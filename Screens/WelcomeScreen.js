@@ -5,7 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faWheelchair } from '@fortawesome/free-solid-svg-icons';
 import ButtonComponent from '../Components/ButtonComponent';
 import Colors from '../Components/Colors';
+import { useNavigation } from '@react-navigation/native';
 const WelcomeScreen = () => {
+
+    const navigation = useNavigation()
+    const handleSelect = () => {
+        navigation.navigate('AccessibilityMapScreen')
+    }
     return (
         <>
             <SafeAreaView style={styles.container}>
@@ -16,12 +22,11 @@ const WelcomeScreen = () => {
                     <FontAwesomeIcon icon={faWheelchair} size={70} color={Colors.primary} />
                 </View>
             </SafeAreaView>
-
             <View style={styles.subtitleContainer}>
                 <Text style={styles.subtitle}>
                     There’s always a way. Let’s find yours.
                 </Text>
-                <ButtonComponent />
+                <ButtonComponent onSelect={() => handleSelect()} />
             </View>
         </>
     );
