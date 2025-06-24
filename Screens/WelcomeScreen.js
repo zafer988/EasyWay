@@ -9,9 +9,10 @@ import { useNavigation } from '@react-navigation/native';
 const WelcomeScreen = () => {
 
     const navigation = useNavigation()
-    const handleSelect = () => {
-        navigation.navigate('AccessibilityMapScreen')
+    const goToMap = () => {
+        navigation.navigate('AccessibilityMap')
     }
+
     return (
         <>
             <SafeAreaView style={styles.container}>
@@ -26,7 +27,7 @@ const WelcomeScreen = () => {
                 <Text style={styles.subtitle}>
                     There’s always a way. Let’s find yours.
                 </Text>
-                <ButtonComponent onSelect={() => handleSelect()} />
+                <ButtonComponent onpress={() => goToMap()} title='Get Started' />
             </View>
         </>
     );
