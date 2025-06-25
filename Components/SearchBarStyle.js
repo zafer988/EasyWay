@@ -1,16 +1,16 @@
 // Components/SearchBarStyle.js
 import { StyleSheet } from 'react-native';
-import Colors from './Colors'; // Colors.js içinde tanımlıysa
-
+import Colors from '../Components/Colors';
 export default StyleSheet.create({
     container: {
         flexDirection: 'row',
         paddingHorizontal: 200,
         paddingVertical: 12,
-        backgroundColor: '#f0f0f0',
+        backgroundColor: Colors.secondary,
         alignItems: 'center',
         justifyContent: 'space-between',
         gap: 10,
+        opacity: 0.9,
     },
     input: {
         flex: 1,
@@ -20,13 +20,13 @@ export default StyleSheet.create({
         paddingHorizontal: 12,
         paddingVertical: 8,
         fontSize: 16,
-        margin: 10
+        margin: 10,
     },
     button: {
-        backgroundColor: Colors.secondary,
         paddingVertical: 10,
         paddingHorizontal: 16,
         borderRadius: 8,
+        marginRight: 10,
     },
     buttonText: {
         color: 'white',
