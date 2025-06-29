@@ -8,9 +8,8 @@ const SearchBar = ({ onSearch }) => {
     const [search, setSearch] = useState('');
 
     const handleSearch = () => {
-        onSearch(search);
-    };
-
+        onSearch(search)
+    }
     return (
         <SafeAreaView style={SearchBarStyle.container}>
             <TextInput
