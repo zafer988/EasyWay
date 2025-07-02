@@ -1,12 +1,12 @@
-require('dotenv').config();
+import 'dotenv/config';
 
-export default () => ({
+export default {
     expo: {
         name: 'EasyWay',
-        slug: 'EasyWay',
+        slug: 'easyway',
         version: '1.0.0',
         extra: {
-            apiUrl: process.env.API_URL,
+            OVERPASS_API_URL: process.env.OVERPASS_API_URL,
         },
     },
-});
+};
