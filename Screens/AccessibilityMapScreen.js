@@ -3,6 +3,7 @@ import { SafeAreaView, View, Text } from 'react-native'
 import MapView from 'react-native-maps'
 import Searchbar from '../Components/SearchBar'
 import useFetch from '../Components/hooks/useFetch/useFetch'
+
 const AccessibilityMapScreen = () => {
     const { location, data, loading, error } = useFetch();
 
@@ -12,7 +13,6 @@ const AccessibilityMapScreen = () => {
                 <Searchbar onSearch={(text) => console.log(text)} />
             </MapView>
 
-            {/* Konum bilgisi kutusu */}
             {location && (
                 <View style={{
                     position: 'absolute',
@@ -22,7 +22,6 @@ const AccessibilityMapScreen = () => {
                     padding: 10,
                     zIndex: 999
                 }}>
-                    <Text>Konum: {location.latitude.toFixed(5)}, {location.longitude.toFixed(5)}</Text>
                 </View>
             )}
         </SafeAreaView>
